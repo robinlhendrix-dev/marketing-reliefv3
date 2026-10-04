@@ -353,6 +353,15 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
 .foot p{margin-top:var(--s200);color:rgba(251,243,228,.86);max-width:22ch;font:300 clamp(30px,3.6vw,48px)/1.08 var(--display);letter-spacing:-.03em}
 .foot a.mail{font:400 clamp(20px,2vw,28px)/1.2 var(--display);text-decoration:none;border:1px solid rgba(251,243,228,.35);border-radius:var(--r-full);padding:var(--s200) var(--s400);transition:background-color 250ms var(--ease-out),color 250ms var(--ease-out),border-color 250ms var(--ease-out)}
 
+.sec-cta{margin-top:var(--s500);display:flex}
+.sec-cta.center{justify-content:center}
+.sheet.plum .btn:before,.foot .btn:before{background:var(--cream)}
+.video-copy .sec-cta,.scoreboard .sec-cta{margin-top:var(--s300)}
+.video-copy{overflow:auto}
+.foot-cta{display:flex;flex-direction:column;align-items:flex-start;gap:var(--s200)}
+@media (hover:hover) and (pointer:fine){.sheet.plum .btn:hover,.foot .btn:hover{color:var(--ink)}}
+@media(max-width:430px){.sec-cta .btn,.foot-cta .btn{width:100%}}
+
 /* ---------- Consent ---------- */
 .consent{position:fixed;inset:auto 0 0;z-index:190;background:var(--plum);color:var(--cream);box-shadow:0 -8px 32px rgba(34,31,29,.25);transform:none;opacity:1;transition:transform 400ms var(--flow),opacity 400ms var(--flow),display 400ms allow-discrete}
 .consent[hidden]{display:none;transform:translateY(100%);opacity:0}
@@ -534,6 +543,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
             <span class="index">01 | Recognition</span>
             <h2 class="h2" id="problem-title" data-split>Which marketing job keeps landing back on you?</h2>
             <p class="intro" data-reveal>The problem is rarely a lack of ideas. It is that ownership is split across the practice, a vendor, and whatever can be finished after hours.</p>
+            <div class="sec-cta"><a class="btn" href="#review" data-track="recognition_review">Get A Free Review</a></div>
           </div>
           <div class="signal-board" data-board>
             <article class="signal"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="signal-num">Signal 01</span><h3>Website changes wait</h3><p>Simple updates compete with client work and stay unfinished longer than they should.</p></article>
@@ -566,6 +576,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
             <p>Request a free review and we will map what is currently falling back onto you, what should be delegated first, and what a practical first month would include.</p>
           </div></div>
         </div>
+        <div class="sec-cta"><a class="btn" href="#review" data-track="video_review">Get A Free Review</a></div>
       </div>
     </div>
   </section>
@@ -603,6 +614,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
           <article class="step"><h3>Improve</h3><p>Use the result to decide what continues, changes, or stops next.</p></article>
         </div>
       </div>
+      <div class="sec-cta center"><a class="btn" href="#review" data-track="path_review">Get A Free Review</a></div>
     </div>
   </section>
 
@@ -620,6 +632,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
         <div class="priorities" aria-hidden="true"><div><i></i><b></b></div><div><i></i><b></b></div><div><i></i><b></b></div></div>
         <p class="big">Three priorities. Plain reasoning. <em>A clear next step.</em></p>
         <p>No invented scores and no generic checklist. The review is tied to the practice information you provide.</p>
+        <div class="sec-cta"><a class="btn" href="#review" data-track="review_value_review">Get A Free Review</a></div>
       </aside>
     </div>
   </section>
@@ -740,6 +753,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
           <h3>Google and Facebook campaigns connected to the same client path.</h3>
         </article>
       </div>
+      <div class="sec-cta center"><a class="btn" href="#review" data-track="services_review">Get A Free Review</a></div>
     </div>
   </section>
 
@@ -785,6 +799,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
         <details><summary>Will I lose control of my voice?</summary><p>No. You approve direction and messaging. ScaleUp owns execution and follow-through.</p></details>
         <details><summary>Do I have to replace every tool?</summary><p>No. The review starts with the systems already in use and identifies only the gaps that prevent follow-through.</p></details>
         <details><summary>What happens after I request the review?</summary><p>You can choose a working-session time immediately. We use the review to decide what should move off your list first.</p></details>
+        <div class="sec-cta"><a class="btn" href="#review" data-track="faq_review">Get A Free Review</a></div>
       </div>
     </div>
   </section>
@@ -794,7 +809,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
   <img class="foot-heron" src="images/heron.png" alt="" width="700" height="556">
   <div class="wrap foot-grid">
     <div><div class="foot-brand"><img src="images/scaleup-logo-cream.png" width="827" height="800" alt="ScaleUp Ventures"></div><p>Founder-led websites and online strategy for independent practices.</p></div>
-    <a class="mail" href="mailto:contact@scaleupventures.co">contact@scaleupventures.co</a>
+    <div class="foot-cta"><a class="btn" href="#review" data-track="footer_review">Get A Free Review</a><a class="mail" href="mailto:contact@scaleupventures.co">contact@scaleupventures.co</a></div>
   </div>
 </footer>
 
