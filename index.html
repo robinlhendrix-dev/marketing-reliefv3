@@ -319,6 +319,14 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
 .control input,.control select,.control textarea{width:100%;min-height:52px;border:1px solid rgba(34,31,29,.35);border-radius:var(--r-xl);background:#fff;color:var(--ink);padding:var(--s100) var(--s200);transition:border-color 250ms var(--ease-out),box-shadow 250ms var(--ease-out)}
 .control input:focus,.control select:focus,.control textarea:focus{border-color:var(--plum);box-shadow:0 0 0 4px rgba(92,31,61,.12)}
 .control textarea{min-height:120px;resize:vertical}
+.form-card-h{font:300 clamp(30px,3vw,42px)/1.08 var(--display);letter-spacing:-.04em;margin-bottom:var(--s100);font-variation-settings:'SOFT' 60}
+.form-card-sub{font-size:16px;line-height:24px;color:var(--ink-soft);margin-bottom:var(--s400)}
+.req{color:var(--orange-text);font-weight:700}
+.hint{font-weight:400;color:var(--ink-soft)}
+.err{display:block;color:#8c1d18;font-size:13px;line-height:18px;font-weight:600;margin-top:6px}
+.err:empty{display:none}
+.control input[aria-invalid="true"],.control select[aria-invalid="true"],.control textarea[aria-invalid="true"]{border-color:#8c1d18}
+.form-card .form-grid{margin-bottom:var(--s300)}
 .form-note{font-size:14px;line-height:20px;color:var(--ink-soft);margin:var(--s200) 0}
 .form-card .btn{width:100%}
 .booking{margin-top:var(--s300);border:1px solid var(--hair);border-radius:var(--r-xl);background:var(--cream);padding:var(--s300);opacity:1;transform:none;transition:opacity 400ms var(--flow),transform 400ms var(--flow),display 400ms allow-discrete}
@@ -484,7 +492,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
   <nav class="nav" aria-label="Main navigation">
     <a class="brand" href="#top" aria-label="ScaleUp Ventures, top"><img src="images/scaleup-logo.png" width="827" height="800" alt="ScaleUp Ventures"></a>
     <span class="nav-tag">For therapists tired of managing marketing</span>
-    <a class="btn small" href="#review" data-track="header_review">Get A Free Review</a>
+    <a class="btn small" href="#review" data-track="header_review">Book a Call Today</a>
   </nav>
 </header>
 
@@ -502,7 +510,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
           <h1 id="hero-title" data-split>Keep your practice. <em>Hand off the marketing workload.</em></h1>
           <p class="hero-lede" data-hero="fade">One accountable team runs the website, campaigns, inquiry follow-up, and measurement while you keep control of your voice, budget, and clinical priorities.</p>
           <div class="cta-row" data-hero="fade">
-            <a class="btn" href="#review" data-track="hero_review" data-magnet>Get A Free Website Review <svg class="arr ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn" href="#review" data-track="hero_review" data-magnet>Book a Call Today <svg class="arr ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="btn secondary" href="#changes" data-track="hero_changes">See What Moves Off Your List</a>
           </div>
           <p class="sticky-line" data-hero="fade"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>You should approve the direction, not chase every task.</p>
@@ -543,7 +551,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
             <span class="index">01 | Recognition</span>
             <h2 class="h2" id="problem-title" data-split>Which marketing job keeps landing back on you?</h2>
             <p class="intro" data-reveal>The problem is rarely a lack of ideas. It is that ownership is split across the practice, a vendor, and whatever can be finished after hours.</p>
-            <div class="sec-cta"><a class="btn" href="#review" data-track="recognition_review">Get A Free Review</a></div>
+            <div class="sec-cta"><a class="btn" href="#review" data-track="recognition_review">Book a Call Today</a></div>
           </div>
           <div class="signal-board" data-board>
             <article class="signal"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="signal-num">Signal 01</span><h3>Website changes wait</h3><p>Simple updates compete with client work and stay unfinished longer than they should.</p></article>
@@ -576,7 +584,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
             <p>Request a free review and we will map what is currently falling back onto you, what should be delegated first, and what a practical first month would include.</p>
           </div></div>
         </div>
-        <div class="sec-cta"><a class="btn" href="#review" data-track="video_review">Get A Free Review</a></div>
+        <div class="sec-cta"><a class="btn" href="#review" data-track="video_review">Book a Call Today</a></div>
       </div>
     </div>
   </section>
@@ -614,7 +622,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
           <article class="step"><h3>Improve</h3><p>Use the result to decide what continues, changes, or stops next.</p></article>
         </div>
       </div>
-      <div class="sec-cta center"><a class="btn" href="#review" data-track="path_review">Get A Free Review</a></div>
+      <div class="sec-cta center"><a class="btn" href="#review" data-track="path_review">Book a Call Today</a></div>
     </div>
   </section>
 
@@ -632,7 +640,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
         <div class="priorities" aria-hidden="true"><div><i></i><b></b></div><div><i></i><b></b></div><div><i></i><b></b></div></div>
         <p class="big">Three priorities. Plain reasoning. <em>A clear next step.</em></p>
         <p>No invented scores and no generic checklist. The review is tied to the practice information you provide.</p>
-        <div class="sec-cta"><a class="btn" href="#review" data-track="review_value_review">Get A Free Review</a></div>
+        <div class="sec-cta"><a class="btn" href="#review" data-track="review_value_review">Book a Call Today</a></div>
       </aside>
     </div>
   </section>
@@ -753,7 +761,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
           <h3>Google and Facebook campaigns connected to the same client path.</h3>
         </article>
       </div>
-      <div class="sec-cta center"><a class="btn" href="#review" data-track="services_review">Get A Free Review</a></div>
+      <div class="sec-cta center"><a class="btn" href="#review" data-track="services_review">Book a Call Today</a></div>
     </div>
   </section>
 
@@ -768,18 +776,29 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
         <div class="room" aria-hidden="true"><img src="images/waiting-room.jpg" alt="" width="1400" height="933" loading="lazy"></div>
       </div>
       <div class="form-card" data-reveal>
-        <form data-review-form data-analytics-form="therapist-marketing-relief" novalidate>
+        <h2 class="form-card-h" id="form-card-h">Tell us about your practice.</h2>
+        <p class="form-card-sub">Fields marked <span class="req">*</span> are required. We respond within one business day.</p>
+        <form data-review-form data-analytics-form="therapist-marketing-relief" novalidate aria-labelledby="form-card-h">
           <div class="form-grid">
-            <div class="control"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
-            <div class="control"><label for="email">Email</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" placeholder="name@practice.com..." required></div>
-            <div class="control full"><label for="website">Practice website</label><input id="website" name="website" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="https://..." required></div>
-            <div class="control"><label for="challenge">Which task keeps falling back on you?</label><select id="challenge" name="challenge" required><option value="">Choose one...</option><option>Website updates</option><option>Lead generation</option><option>Inquiry follow-up</option><option>Tracking results</option><option>All of the above</option></select></div>
-            <div class="control"><label for="timing">When would you like this addressed?</label><select id="timing" name="timing" required><option value="">Choose one...</option><option>Within 30 days</option><option>Within 90 days</option><option>Later this year</option><option>I am exploring</option></select></div>
-            <div class="control full"><label for="context">Anything we should understand before reviewing?</label><textarea id="context" name="context" placeholder="A short note is enough..."></textarea></div>
+            <div class="control"><label for="name">Full name <span class="req" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err"><span class="err" id="name-err" role="alert"></span></div>
+            <div class="control"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" required aria-describedby="email-err" placeholder="name@practice.com"><span class="err" id="email-err" role="alert"></span></div>
+            <div class="control"><label for="phone">Phone <span class="hint">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-err"><span class="err" id="phone-err" role="alert"></span></div>
+            <div class="control"><label for="years">Years in business <span class="hint">(optional)</span></label><input id="years" name="years" type="number" min="0" max="100" inputmode="numeric" aria-describedby="years-err"><span class="err" id="years-err" role="alert"></span></div>
+            <div class="control full"><label for="service">Service interested in <span class="req" aria-hidden="true">*</span></label>
+              <select id="service" name="service" required aria-describedby="service-err">
+                <option value="">Choose one</option>
+                <option>Brand Development</option>
+                <option>Logo &amp; Brand Identity Development</option>
+                <option>Website Platform</option>
+                <option>Lead Generation</option>
+                <option>Growth Strategy Consulting</option>
+                <option>Custom Development + AI Solutions</option>
+                <option>Not sure yet</option>
+              </select><span class="err" id="service-err" role="alert"></span></div>
+            <div class="control full"><label for="reason">Reason for contacting ScaleUp <span class="req" aria-hidden="true">*</span></label><textarea id="reason" name="reason" required aria-describedby="reason-err" placeholder="What is getting in the way right now?"></textarea><span class="err" id="reason-err" role="alert"></span></div>
           </div>
           <div class="hp" aria-hidden="true"><label for="company_website_confirm">Leave this empty</label><input id="company_website_confirm" name="company_website_confirm" type="text" tabindex="-1" autocomplete="off"></div>
-          <p class="form-note">We will use these details to prepare your review and respond within one business day.</p>
-          <button class="btn" type="submit"><span>Request My Review</span></button>
+          <button class="btn" type="submit"><span>Book a Call Today</span> <svg class="arr ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <div class="form-status" data-form-status role="status" aria-live="polite"></div>
         </form>
         <section class="booking" data-booking hidden tabindex="-1" aria-live="polite">
@@ -799,7 +818,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
         <details><summary>Will I lose control of my voice?</summary><p>No. You approve direction and messaging. ScaleUp owns execution and follow-through.</p></details>
         <details><summary>Do I have to replace every tool?</summary><p>No. The review starts with the systems already in use and identifies only the gaps that prevent follow-through.</p></details>
         <details><summary>What happens after I request the review?</summary><p>You can choose a working-session time immediately. We use the review to decide what should move off your list first.</p></details>
-        <div class="sec-cta"><a class="btn" href="#review" data-track="faq_review">Get A Free Review</a></div>
+        <div class="sec-cta"><a class="btn" href="#review" data-track="faq_review">Book a Call Today</a></div>
       </div>
     </div>
   </section>
@@ -809,7 +828,7 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
   <img class="foot-heron" src="images/heron.png" alt="" width="700" height="556">
   <div class="wrap foot-grid">
     <div><div class="foot-brand"><img src="images/scaleup-logo-cream.png" width="827" height="800" alt="ScaleUp Ventures"></div><p>Founder-led websites and online strategy for independent practices.</p></div>
-    <div class="foot-cta"><a class="btn" href="#review" data-track="footer_review">Get A Free Review</a><a class="mail" href="mailto:contact@scaleupventures.co">contact@scaleupventures.co</a></div>
+    <div class="foot-cta"><a class="btn" href="#review" data-track="footer_review">Book a Call Today</a><a class="mail" href="mailto:contact@scaleupventures.co">contact@scaleupventures.co</a></div>
   </div>
 </footer>
 
@@ -1029,10 +1048,19 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
   form.addEventListener('submit', async e => {
     e.preventDefault();
     if (!form.checkValidity()) {
-      form.reportValidity();
+      form.querySelectorAll('.control').forEach(c => {
+        const f = c.querySelector('input,select,textarea'), er = c.querySelector('.err');
+        if (!f || !er) return;
+        const bad = !f.checkValidity();
+        f.setAttribute('aria-invalid', String(bad));
+        er.textContent = bad ? (f.validity.valueMissing ? 'Please fill this in.' : f.validity.typeMismatch ? 'Please enter a valid email address.' : 'Please check this entry.') : '';
+      });
+      const first = form.querySelector('[aria-invalid="true"]'); if (first) first.focus();
       event('landing_form_invalid');
       return;
     }
+    form.querySelectorAll('[aria-invalid]').forEach(f => f.removeAttribute('aria-invalid'));
+    form.querySelectorAll('.err').forEach(er => { er.textContent = ''; });
     const submit = form.querySelector('button[type="submit"]');
     const label = submit.querySelector('span');
     const values = Object.fromEntries(new FormData(form));
@@ -1041,10 +1069,10 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
     const payload = {
       name: values.name,
       email: values.email,
-      phone: '',
-      years: '',
-      service: 'Therapist Marketing relief review',
-      reason: ['Website: ' + values.website, 'Which task keeps falling back on you?: ' + values.challenge, 'Timing: ' + values.timing, values.context ? 'Context: ' + values.context : ''].filter(Boolean).join('\n'),
+      phone: values.phone || '',
+      years: values.years || '',
+      service: values.service,
+      reason: values.reason,
       company_website_confirm: values.company_website_confirm || '',
       ...analytics
     };
@@ -1065,11 +1093,11 @@ html:not(.js) .panel{margin:var(--s200) 0 var(--s300)}
       status.className = 'form-status is-on bad';
       event('landing_form_error');
       submit.disabled = false;
-      label.textContent = 'Request My Review';
+      label.textContent = 'Book a Call Today';
       return;
     }
     submit.disabled = false;
-    label.textContent = 'Request My Review';
+    label.textContent = 'Book a Call Today';
     booking.hidden = false;
     booking.focus();
     event('landing_form_complete');
